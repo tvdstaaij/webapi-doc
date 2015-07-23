@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Webapi-doc by intellifi-nl</title>
+    <title>Brain web API by intellifi-nl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Webapi-doc</h1>
+      <h1 class="project-name">Brain web API</h1>
       <h2 class="project-tagline">Documentation on the Intellifi web API.</h2>
       <a href="https://github.com/intellifi-nl/webapi-doc" class="btn">View on GitHub</a>
       <a href="https://github.com/intellifi-nl/webapi-doc/zipball/master" class="btn">Download .zip</a>
@@ -19,10 +19,7 @@
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="brain-web-api-documentation" class="anchor" href="#brain-web-api-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Brain web API documentation</h1>
-
-<p>This document contain the official Brain web API documentation. The Brain web API is a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful API</a> that allows you to access all the data that we provide in a powerfull and simple way.</p>
+      <p>This document contain the official Brain web API documentation. The Brain web API is a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful API</a> that allows you to access all the data that we provide in a powerfull and simple way.</p>
 
 <p>By default the api is accessible on: http://<code>brain_host</code>/api/<code>resource</code>/<code>id</code></p>
 
@@ -104,16 +101,16 @@
 <h2>
 <a id="item" class="anchor" href="#item" aria-hidden="true"><span class="octicon octicon-link"></span></a>Item</h2>
 
-<p>An item is a small and lightweight electronic device that contains and remembers a unique code. An item must be able to transmit this unqiue code wireless. This item may be a passive RFID tag, but it can also be an iBeacon. Even your smartphone could behave itself as an item. A device is an item as long as it's able to remember and transmit it's unique code.</p>
+<p>An item is a small and lightweight electronic device that contains and remembers a unique code. An item must be able to transmit this unqiue code wireless. This item may be a passive RFID tag, but it can also be an iBeacon. Even your smartphone could behave itself as an item. A device is an item as long as it's able to remember and transmit its unique code.</p>
 
 <p>An item is an abstraction that allows us to work with RFID tags and iBeacon tags as if they where the same. Attributes are added to the items so that you can see the difference, if you wish.</p>
 
 <h2>
 <a id="zone" class="anchor" href="#zone" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zone</h2>
 
-<p>A zone is an area in which items can be detected. This area is naturually limited to the range of the used RFID technology. Passive tags have a range of approximately 10 meters, active tags can easily have a range of 100+ meters. A zone must be able to reports it's detected items.</p>
+<p>A zone is an area in which items can be detected. This area is naturually limited to the range of the used RFID technology. Passive tags have a range of approximately 10 meters, active tags can easily have a range of 100+ meters. A zone must be able to reports its detected items.</p>
 
-<p>A lot of devices are capable of behaving themselves as 'zones'. Our <a href="http://intellifi.nl/home/products/">Intellif Spot</a> is a very good example of this. It can detect RFID tags and Bluetooth tags that are in the neighbourhoud. It reports these detections through it's network interface to a server. It's also possible to connect external antennas to the Spot. By default they are used to enlarge the reach of the overall Spot zone. You may configure individual external antenna to behave themselve as a zone as well. By doing so you are essentially creating a virtual spot. </p>
+<p>A lot of devices are capable of behaving themselves as 'zones'. Our <a href="http://intellifi.nl/home/products/">Intellif Spot</a> is a very good example of this. It can detect RFID tags and Bluetooth tags that are in the neighbourhoud. It reports these detections through its network interface to a server. It's also possible to connect external antennas to the Spot. By default they are used to enlarge the reach of the overall Spot zone. You may configure individual external antenna to behave themselve as a zone as well. By doing so you are essentially creating a virtual spot. </p>
 
 <p>Another great example of a zone could be your smartphone. Lot's of smartphones support the detection if iBeacons. It's a matter of the right app to report this information to a server. And voilà: here's another zone that you can use to detect your items.</p>
 
@@ -169,9 +166,9 @@
 <p>Most resources contain one or more fields that reference to another resource in the API. I.e. An item resource will be pointing to some location. These references can be shown in three ways. Depending on the arguments that you supply in the query part of your request url.</p>
 
 <ol>
-<li><p>By default it's shown as an url. This helps you in navigating to it, if you have the right browser extension then you can just click it. The '_url' is postfixed to the field name. I.e. location becomes location_url.
+<li><p>By default it's shown as a url. This helps you in navigating to it, if you have the right browser extension then you can just click it. The '_url' is postfixed to the field name. I.e. location becomes location_url.
 <img src="https://raw.githubusercontent.com/intellifi-nl/doc-webapi/master/explore.png" alt=""></p></li>
-<li><p>If you add <code>id_only=true</code> in the query then only the id of the resource is shwon. The name of the field is postfixed with '_id'. I.e. location becomes location_id
+<li><p>If you add <code>id_only=true</code> in the query then only the id of the resource is shown. The name of the field is postfixed with '_id'. I.e. location becomes location_id
 <img src="https://raw.githubusercontent.com/intellifi-nl/doc-webapi/master/explore_idonly.png" alt=""></p></li>
 <li><p>If you add <code>populate=fieldname,fieldname2,etc</code> in the query string then the brain will try to add the documents as an extra level in the results. The name of the field is not appended with a postfix in this case. If the lookup fails then <code>null</code> is returned as value.
 <img src="https://raw.githubusercontent.com/intellifi-nl/doc-webapi/master/explore_populate.png" alt=""></p></li>
@@ -244,7 +241,7 @@
 </ul>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/intellifi-nl/webapi-doc">Webapi-doc</a> is maintained by <a href="https://github.com/intellifi-nl">intellifi-nl</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/intellifi-nl/webapi-doc">Brain web API</a> is maintained by <a href="https://github.com/intellifi-nl">intellifi-nl</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
